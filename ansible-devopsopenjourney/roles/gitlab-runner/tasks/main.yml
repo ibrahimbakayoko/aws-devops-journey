@@ -1,0 +1,50 @@
+# roles/gitlab_runner/tasks/main.yml
+
+- name: Add GitLab Runner repository GPG key
+  apt_key:
+    url: https://packages.gitlab.com/runner/gitlab-runner/gpgkey
+    state: present
+
+- name: Add GitLab Runner apt repository
+  apt_repository:
+    repo: "deb https://packages.gitlab.com/runner/gitlab-runner/ubuntu/ {{ ansible_distribution_release | lower }} main"
+    state: present
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install GitLab Runner and Docker packages
+  apt:
+    name:
+      - gitlab-runner
+      - docker.io
+    state: present
+
+- name: Ensure Docker service is started and enabled
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Enable and start GitLab Runner service
+  service:
+    name: gitlab-runner
+    state: started
+    enabled: yes
+
+- name: Register GitLab Runner (only if not registered)
+  command: >
+    gitlab-runner register
+    --non-interactive
+    --url {{ gitlab_runner_url }}
+    --registration-token {{ gitlab_runner_token }}
+    --executor {{ gitlab_runner_executor }}
+    --description {{ gitlab_runner_name }}
+    --docker-image {{ gitlab_runner_docker_image }}
+    --tag-list "{{ gitlab_runner_tags }}"
+    --run-untagged="true"
+    --locked="false"
+  args:
+    creates: /etc/gitlab-runner/config.toml
+

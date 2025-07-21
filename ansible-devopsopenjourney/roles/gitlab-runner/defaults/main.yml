@@ -1,0 +1,9 @@
+# roles/gitlab_runner/defaults/main.yml
+
+gitlab_runner_url: "https://gitlab.com/"
+gitlab_runner_token: "glrt-utNxqpWpKD3sWtk0VVvAjW86MQpwOjE2bWwzYwp0OjMKdTplcTdldBg.01.1j0v0vdxg"
+gitlab_runner_name: "runner-devops-local"
+gitlab_runner_executor: "docker"
+gitlab_runner_docker_image: "alpine:latest"
+gitlab_runner_tags: "devops,ansible,runner"
+

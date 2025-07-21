@@ -1,0 +1,7 @@
+# roles/gitlab_runner/handlers/main.yml
+
+- name: restart gitlab-runner
+  service:
+    name: gitlab-runner
+    state: restarted
+

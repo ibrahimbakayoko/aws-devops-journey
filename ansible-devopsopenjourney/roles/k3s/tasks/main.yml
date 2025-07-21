@@ -1,0 +1,16 @@
+---
+- name: Installer K3s (single-node)
+  shell: |
+    curl -sfL https://get.k3s.io | sh -
+  args:
+    creates: /usr/local/bin/k3s
+
+- name: Vérifier l’installation de K3s
+  command: /usr/local/bin/k3s --version
+  register: k3s_version
+  changed_when: false
+
+- name: Afficher la version de K3s
+  debug:
+    var: k3s_version.stdout
+

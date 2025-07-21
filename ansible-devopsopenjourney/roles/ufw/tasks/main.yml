@@ -1,0 +1,31 @@
+---
+# tasks file for ufw
+
+- name: Installer UFW
+  apt:
+    name: ufw
+    state: present
+    update_cache: yes
+
+- name: Autoriser SSH
+  ufw:
+    rule: allow
+    name: OpenSSH
+
+- name: Autoriser le port HTTP (80)
+  ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+
+- name: Autoriser le port HTTPS (443)
+  ufw:
+    rule: allow
+    port: '443'
+    proto: tcp
+
+- name: Activer UFW
+  ufw:
+    state: enabled
+    policy: deny
+
