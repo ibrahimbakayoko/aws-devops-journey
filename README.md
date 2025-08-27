@@ -4,8 +4,8 @@
 Ce projet open-source documente la mise en place d'une infrastructure DevOps sur AWS, 100% dans le Free Tier.
 ---
 <div style="display:flex; justify-content:center; margin:20px 0;">
-  <div style="background-color:#ffffff; border:1px solid #ddd; border-radius:10px; padding:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width:90%;">
-    <img src="./docs/devopsjourney.png" alt="AWS DevOps Journey Architecture" style="width:100%; height:auto; border-radius:8px;"/>
+  <div style="background-color:#ffffff; border:1px solid #ddd; border-radius:10px; padding:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="./docs/devopsjourney.png" alt="AWS DevOps Journey Architecture" style="max-width:800px; height:auto; border-radius:8px;"/>
   </div>
 </div>
 
