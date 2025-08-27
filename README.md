@@ -2,7 +2,7 @@
 # 🚀 DevOps Open Journey
 
 ---
-<img src="./docs/devopsjourney.png" alt="aws devops journey Architecture" "/>
+<img src="./docs/devopsjourney.png" alt="aws devops journey Architecture"/>
 
 Ce projet open-source documente la mise en place d'une infrastructure DevOps sur AWS, 100% dans le Free Tier.
 
