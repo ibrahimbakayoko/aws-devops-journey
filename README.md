@@ -2,7 +2,7 @@
 # 🚀 DevOps Open Journey
 
 ---
-<img src="./Docs/securegitopslab-illustration.png" alt="SecureGitOpsLab Architecture" style="width:100%;"/>
+<img src="./Docs/devopsjourney.png" alt="aws devops journey Architecture" style="width:100%;"/>
 
 Ce projet open-source documente la mise en place d'une infrastructure DevOps sur AWS, 100% dans le Free Tier.
 
