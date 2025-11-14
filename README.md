@@ -1,7 +1,7 @@
 # aws-devops-journey
 ---
 
-Ce projet open-source documente la mise en place d'une infrastructure DevOps sur AWS, 100% dans le Free Tier.
+Ce projet open-source documente la mise en place d'une infrastructure DevOps sur AWS.
 ---
 <div style="display:flex; justify-content:center; margin:20px 0;">
   <div style="background-color:#ffffff; border:1px solid #ddd; border-radius:10px; padding:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
