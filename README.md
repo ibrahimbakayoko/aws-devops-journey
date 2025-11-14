@@ -32,7 +32,7 @@ Ce projet open-source documente la mise en place d'une infrastructure DevOps com
 ---
 
 ## 📍 Étape actuelle
-- ✅ Provisioning AWS via Terraform (Semaine 1)
+- ✅ Provisioning AWS via Terraform 
 
 ---
 
