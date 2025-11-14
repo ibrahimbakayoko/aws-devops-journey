@@ -2,8 +2,8 @@
   hosts: aws_ec2
   become: yes
   roles:
-#    - docker      # déjà fait, si tu veux le re-exécuter, sinon enlever
-#    - k3s         # idem
+    - docker      # déjà fait, si tu veux le re-exécuter, sinon enlever
+    - k3s         # idem
     - gitlab-runner  # remplace gitlab par gitlab_runner
     - ufw
 
